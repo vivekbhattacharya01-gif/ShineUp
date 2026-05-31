@@ -2,7 +2,7 @@ import { GlassCard } from "./glass-card";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { Calendar, FileText, Wrench } from "lucide-react";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { ImageWithFallback } from "./common/ImageWithFallback";
 
 interface VehicleCardProps {
   vehicle: {
