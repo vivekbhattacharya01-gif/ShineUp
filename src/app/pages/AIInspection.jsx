@@ -54,17 +54,17 @@ function AIInspection() {
         {
     /* Vehicle Type Selection */
   }
-        <div className="flex justify-center gap-4 mb-12">
+        <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 mb-12">
           <button
     onClick={() => setVehicleType("car")}
-    className={`flex items-center gap-3 px-8 py-4 rounded-xl transition-all ${vehicleType === "car" ? "bg-[#D4AF37] text-black" : "bg-white/5 text-white/70 hover:bg-white/10"}`}
+    className={`flex-1 sm:flex-none flex items-center justify-center gap-3 px-8 py-4 rounded-xl transition-all ${vehicleType === "car" ? "bg-[#D4AF37] text-black" : "bg-white/5 text-white/70 hover:bg-white/10"}`}
   >
             <CarIcon className="w-6 h-6" />
             <span className="text-lg">Car</span>
           </button>
           <button
     onClick={() => setVehicleType("bike")}
-    className={`flex items-center gap-3 px-8 py-4 rounded-xl transition-all ${vehicleType === "bike" ? "bg-[#D4AF37] text-black" : "bg-white/5 text-white/70 hover:bg-white/10"}`}
+    className={`flex-1 sm:flex-none flex items-center justify-center gap-3 px-8 py-4 rounded-xl transition-all ${vehicleType === "bike" ? "bg-[#D4AF37] text-black" : "bg-white/5 text-white/70 hover:bg-white/10"}`}
   >
             <Bike className="w-6 h-6" />
             <span className="text-lg">Bike</span>
@@ -154,7 +154,7 @@ function AIInspection() {
     size="lg"
     disabled={!isComplete || isProcessing}
     onClick={handleAnalyze}
-    className="min-w-64"
+    className="w-full sm:w-auto"
   >
             {isProcessing ? <>
                 <div className="w-5 h-5 border-2 border-black/30 border-t-black rounded-full animate-spin" />

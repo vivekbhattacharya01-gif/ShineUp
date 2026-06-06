@@ -1,6 +1,7 @@
 import { GlassCard } from "../components/glass-card.jsx";
 import { Button } from "../components/ui/button.jsx";
 import { Badge } from "../components/ui/badge.jsx";
+import { Link } from "react-router";
 import { Sparkles, Shield, Users } from "lucide-react";
 
 export function LandingPage() {
@@ -18,12 +19,15 @@ export function LandingPage() {
             <p className="mt-6 max-w-2xl text-lg text-foreground/70">
               Discover service partners, book maintenance, track your garage, and keep your vehicle running like new — all from one intelligent platform.
             </p>
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <Button size="lg" className="bg-primary text-primary-foreground px-8">
-                Explore Marketplace
+            <div className="mt-8 grid gap-3 sm:flex sm:items-center sm:gap-4">
+              <Button asChild size="lg" className="w-full sm:w-auto bg-primary text-primary-foreground px-8">
+                <Link to="/marketplace">Explore Marketplace</Link>
               </Button>
-              <Button variant="outline" size="lg" className="px-8">
-                Become a Partner
+              <Button asChild variant="outline" size="lg" className="w-full sm:w-auto px-8">
+                <Link to="/become-partner">Become a Partner</Link>
+              </Button>
+              <Button asChild variant="ghost" size="lg" className="w-full sm:w-auto border border-white/10 px-8 text-white/80 hover:text-white">
+                <Link to="/ai-assistant">Ask AI Assistant</Link>
               </Button>
             </div>
           </div>

@@ -15,6 +15,7 @@ function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navLinks = [
     { path: "/marketplace", label: "Marketplace", icon: Store },
+    { path: "/ai-assistant", label: "AI Assistant", icon: Sparkles },
     { path: "/ai-inspection", label: "AI Inspection", icon: Sparkles },
     { path: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
     { path: "/community", label: "Community", icon: Users }

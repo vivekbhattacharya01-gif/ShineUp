@@ -5,6 +5,7 @@ import { Marketplace } from "./pages/marketplace.jsx";
 import { ProviderProfile } from "./pages/provider-profile.jsx";
 import { AIVehicleInspection } from "./pages/ai-vehicle-inspection.jsx";
 import { AIDiagnosticReport } from "./pages/ai-diagnostic-report.jsx";
+import { AIAssistant } from "./pages/ai-assistant.jsx";
 import { UserDashboard } from "./pages/user-dashboard.jsx";
 import { MyGarage } from "./pages/my-garage.jsx";
 import { VehicleHistory } from "./pages/vehicle-history.jsx";
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
       { index: true, Component: LandingPage },
       { path: "marketplace", Component: Marketplace },
       { path: "provider/:id", Component: ProviderProfile },
+      { path: "ai-assistant", Component: AIAssistant },
       { path: "ai-inspection", Component: AIVehicleInspection },
       { path: "ai-report/:id", Component: AIDiagnosticReport },
       { path: "dashboard", Component: UserDashboard },
