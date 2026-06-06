@@ -1,5 +1,5 @@
 import { Outlet, useLocation } from "react-router";
-import { Navbar } from "../components/navbar.jsx";
+import { Navbar } from "../components/Navbar.jsx";
 function RootLayout() {
   const location = useLocation();
   const isLandingPage = location.pathname === "/";
