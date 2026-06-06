@@ -1,14 +1,13 @@
 import { Outlet, useLocation } from "react-router";
-import { Navbar } from "../components/navbar";
-
-export function RootLayout() {
+import { Navbar } from "../components/navbar.jsx";
+function RootLayout() {
   const location = useLocation();
   const isLandingPage = location.pathname === "/";
-
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Navbar transparent={isLandingPage} />
       <Outlet />
-    </div>
-  );
+    </div>;
 }
+export {
+  RootLayout
+};
