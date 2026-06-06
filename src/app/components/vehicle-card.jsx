@@ -2,7 +2,7 @@ import { GlassCard } from "./glass-card.jsx";
 import { Button } from "./ui/button.jsx";
 import { Badge } from "./ui/badge.jsx";
 import { Calendar, FileText, Wrench } from "lucide-react";
-import { ImageWithFallback } from "./common/ImageWithFallback.jsx";
+import { ImageWithFallback } from "./Common/ImageWithFallback.jsx";
 function VehicleCard({ vehicle, onSelect }) {
   return <GlassCard hover className="overflow-hidden">
       <div className="aspect-video relative overflow-hidden">

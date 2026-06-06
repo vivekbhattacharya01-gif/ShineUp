@@ -2,7 +2,7 @@ import { GlassCard } from "./glass-card.jsx";
 import { Button } from "./ui/button.jsx";
 import { Badge } from "./ui/badge.jsx";
 import { Star, MapPin, Shield, MessageCircle } from "lucide-react";
-import { ImageWithFallback } from "./common/ImageWithFallback.jsx";
+import { ImageWithFallback } from "./Common/ImageWithFallback.jsx";
 import { useNavigate } from "react-router";
 function ProviderCard({ provider }) {
   const navigate = useNavigate();
