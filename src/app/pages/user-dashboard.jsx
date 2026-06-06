@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { GlassCard } from "../components/glass-card.jsx";
 import { Badge } from "../components/ui/badge.jsx";
 import { Button } from "../components/ui/button.jsx";
@@ -39,7 +40,9 @@ export function UserDashboard() {
           <GlassCard className="p-6">
             <div className="flex items-center justify-between gap-4 mb-4">
               <h2 className="text-2xl font-semibold">Quick actions</h2>
-              <Button variant="outline" size="sm">New booking</Button>
+              <Button asChild variant="outline" size="sm">
+                <Link to="/booking">New booking</Link>
+              </Button>
             </div>
             <p className="text-foreground/70">Schedule service, add a new vehicle, or view your upcoming appointments.</p>
           </GlassCard>

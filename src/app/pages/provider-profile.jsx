@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { GlassCard } from "../components/glass-card.jsx";
 import { Button } from "../components/ui/button.jsx";
 import { Badge } from "../components/ui/badge.jsx";
@@ -45,7 +46,9 @@ export function ProviderProfile() {
                 </div>
               </div>
             </GlassCard>
-            <Button size="lg" className="w-full bg-primary text-primary-foreground">Book now</Button>
+            <Button asChild size="lg" className="w-full bg-primary text-primary-foreground">
+              <Link to="/booking">Book now</Link>
+            </Button>
             <GlassCard className="p-6">
               <h2 className="text-2xl font-semibold mb-4">Customer reviews</h2>
               <p className="text-foreground/70">“Excellent service and attention to detail. My car looked brand new again.”</p>

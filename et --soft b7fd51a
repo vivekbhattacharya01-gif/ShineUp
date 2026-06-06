@@ -1,0 +1,23 @@
+[33m542d67a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m fix: move Gemini API key to environment variable
+[33m0f70afc[m feat : AI intgration
+[33mb3129a2[m feat : Integrated Gemini API key , changed layout , deleted unwanted files
+[33mb7fd51a[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m feat: implement AI Assistant feature with chat functionality and integrate into routing
+[33m51ef13f[m chore: add jsconfig.json for TypeScript configuration
+[33m56e49fc[m fix: normalize Navbar import casing in root-layout
+[33m718e283[m refactor: update import paths for ImageWithFallback component to use consistent casing
+[33m3702507[m chore: convert Vite config to JS and update tsconfig
+[33mab42292[m chore: remove unused TypeScript-to-JavaScript migration tooling
+[33m534fe2f[m refactor: migrate page components from TSX/TS to JSX
+[33mab4fa4d[m refactor: convert component library files from TSX/TS to JSX/JS
+[33m43b6760[m refactor: migrate app entry and routing files from TS to JSX
+[33m31f4082[m chore: add JS conversion tooling and update project configuration
+[33mf453f7a[m feat: implement Become Partner page with multi-step application process and benefits overview
+[33ma6d3e94[m feat: add AI Inspection page for vehicle photo uploads and diagnostics
+[33mbda2986[m feat: add AI Vehicle Inspection page with image upload and analysis functionality
+[33mffeee78[m Merge branch 'main' of https://github.com/vivekbhattacharya01-gif/ShineUp
+[33md30789d[m feat: implement comprehensive Admin Dashboard with statistics, charts, and management features
+[33m5f37c95[m refactor: reorganize project structure and shared components
+[33m1e4c52b[m Update README.md
+[33m9acd8db[m issues solved
+[33md7e3f01[m feat: create luxury automotive design system
+[33m964c891[m chore: initialize ShineUp project

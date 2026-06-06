@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { GlassCard } from "../components/glass-card.jsx";
 import { Button } from "../components/ui/button.jsx";
 
@@ -16,7 +17,9 @@ export function PartnerDashboard() {
             <h1 className="text-4xl font-bold">Partner Dashboard</h1>
             <p className="mt-3 text-foreground/70">Track performance, leads, and bookings from your ShineUp partner portal.</p>
           </div>
-          <Button size="lg">Update profile</Button>
+          <Button asChild size="lg">
+            <Link to="/become-partner">Update profile</Link>
+          </Button>
         </div>
 
         <div className="grid gap-6 md:grid-cols-3 mb-8">

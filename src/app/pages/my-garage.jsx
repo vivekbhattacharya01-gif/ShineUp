@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { GlassCard } from "../components/glass-card.jsx";
 import { Button } from "../components/ui/button.jsx";
 
@@ -24,7 +25,9 @@ export function MyGarage() {
               </div>
               <div className="space-y-2 text-right">
                 <p className="text-foreground/70">{vehicle.status}</p>
-                <Button size="sm">View details</Button>
+                <Button asChild size="sm">
+                  <Link to="/garage">View details</Link>
+                </Button>
               </div>
             </GlassCard>
           ))}

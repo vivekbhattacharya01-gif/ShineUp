@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { GlassCard } from "../components/glass-card.jsx";
 import { Button } from "../components/ui/button.jsx";
 
@@ -16,7 +17,9 @@ export function MaintenanceReminders() {
             <h1 className="text-4xl font-bold">Maintenance Reminders</h1>
             <p className="mt-3 text-foreground/70">Stay ahead of your vehicle service schedule with timely reminders.</p>
           </div>
-          <Button size="lg">Add reminder</Button>
+          <Button asChild size="lg">
+            <Link to="/booking">Add reminder</Link>
+          </Button>
         </div>
 
         <div className="space-y-4">
@@ -26,7 +29,9 @@ export function MaintenanceReminders() {
                 <h2 className="text-2xl font-semibold">{reminder.title}</h2>
                 <p className="text-foreground/70">Due {reminder.due}</p>
               </div>
-              <Button variant="outline" size="sm">Reschedule</Button>
+              <Button asChild variant="outline" size="sm">
+                <Link to="/booking">Reschedule</Link>
+              </Button>
             </GlassCard>
           ))}
         </div>
