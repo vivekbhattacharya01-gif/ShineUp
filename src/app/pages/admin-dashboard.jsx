@@ -1,39 +1,33 @@
-import { GlassCard } from "../components/glass-card";
-import { Badge } from "../components/ui/badge";
-import { Button } from "../components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../components/ui/table";
+import { GlassCard } from "../components/glass-card.jsx";
+import { Badge } from "../components/ui/badge.jsx";
+import { Button } from "../components/ui/button.jsx";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs.jsx";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../components/ui/table.jsx";
 import { Users, Store, Calendar, DollarSign, TrendingUp, CheckCircle, XCircle, Eye } from "lucide-react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line } from "recharts";
-
-export function AdminDashboard() {
+function AdminDashboard() {
   const stats = [
     { label: "Total Users", value: "50,234", icon: Users, change: "+8%", color: "text-blue-500" },
     { label: "Active Providers", value: "1,245", icon: Store, change: "+12%", color: "text-green-500" },
     { label: "Total Bookings", value: "18,456", icon: Calendar, change: "+15%", color: "text-primary" },
-    { label: "Platform Revenue", value: "₹42.8L", icon: DollarSign, change: "+23%", color: "text-green-500" },
+    { label: "Platform Revenue", value: "\u20B942.8L", icon: DollarSign, change: "+23%", color: "text-green-500" }
   ];
-
   const revenueData = [
-    { month: "Jan", revenue: 280000, bookings: 2800 },
-    { month: "Feb", revenue: 320000, bookings: 3200 },
-    { month: "Mar", revenue: 380000, bookings: 3650 },
-    { month: "Apr", revenue: 410000, bookings: 3890 },
-    { month: "May", revenue: 428000, bookings: 4120 },
+    { month: "Jan", revenue: 28e4, bookings: 2800 },
+    { month: "Feb", revenue: 32e4, bookings: 3200 },
+    { month: "Mar", revenue: 38e4, bookings: 3650 },
+    { month: "Apr", revenue: 41e4, bookings: 3890 },
+    { month: "May", revenue: 428e3, bookings: 4120 }
   ];
-
   const pendingProviders = [
     { id: "1", name: "Elite Auto Care", location: "Pune", services: "Ceramic, PPF", appliedDate: "May 25, 2026" },
-    { id: "2", name: "Supreme Detailing", location: "Hyderabad", services: "Paint Correction", appliedDate: "May 26, 2026" },
+    { id: "2", name: "Supreme Detailing", location: "Hyderabad", services: "Paint Correction", appliedDate: "May 26, 2026" }
   ];
-
   const recentUsers = [
     { id: "1", name: "Amit Sharma", email: "amit@example.com", vehicles: 2, joinedDate: "May 28, 2026" },
-    { id: "2", name: "Neha Gupta", email: "neha@example.com", vehicles: 1, joinedDate: "May 29, 2026" },
+    { id: "2", name: "Neha Gupta", email: "neha@example.com", vehicles: 1, joinedDate: "May 29, 2026" }
   ];
-
-  return (
-    <div className="min-h-screen pt-24 pb-12">
+  return <div className="min-h-screen pt-24 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between mb-8">
           <div>
@@ -44,10 +38,11 @@ export function AdminDashboard() {
           </div>
         </div>
 
-        {/* Stats */}
+        {
+    /* Stats */
+  }
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          {stats.map((stat, index) => (
-            <GlassCard key={index} className="p-6">
+          {stats.map((stat, index) => <GlassCard key={index} className="p-6">
               <div className="flex items-center justify-between mb-4">
                 <div className="bg-primary/10 w-12 h-12 rounded-xl flex items-center justify-center">
                   <stat.icon className={`h-6 w-6 ${stat.color}`} />
@@ -58,11 +53,12 @@ export function AdminDashboard() {
               </div>
               <div className="text-3xl font-bold mb-1">{stat.value}</div>
               <div className="text-sm text-foreground/60">{stat.label}</div>
-            </GlassCard>
-          ))}
+            </GlassCard>)}
         </div>
 
-        {/* Charts */}
+        {
+    /* Charts */
+  }
         <div className="grid lg:grid-cols-2 gap-8 mb-8">
           <GlassCard className="p-6">
             <h3 className="text-lg mb-6">Revenue Growth</h3>
@@ -71,7 +67,7 @@ export function AdminDashboard() {
                 <CartesianGrid strokeDasharray="3 3" stroke="rgba(212, 175, 55, 0.1)" />
                 <XAxis dataKey="month" stroke="#888" />
                 <YAxis stroke="#888" />
-                <Tooltip contentStyle={{ backgroundColor: 'var(--glass-bg)', border: '1px solid var(--glass-border)' }} />
+                <Tooltip contentStyle={{ backgroundColor: "var(--glass-bg)", border: "1px solid var(--glass-border)" }} />
                 <Line type="monotone" dataKey="revenue" stroke="#d4af37" strokeWidth={2} />
               </LineChart>
             </ResponsiveContainer>
@@ -84,14 +80,16 @@ export function AdminDashboard() {
                 <CartesianGrid strokeDasharray="3 3" stroke="rgba(212, 175, 55, 0.1)" />
                 <XAxis dataKey="month" stroke="#888" />
                 <YAxis stroke="#888" />
-                <Tooltip contentStyle={{ backgroundColor: 'var(--glass-bg)', border: '1px solid var(--glass-border)' }} />
+                <Tooltip contentStyle={{ backgroundColor: "var(--glass-bg)", border: "1px solid var(--glass-border)" }} />
                 <Bar dataKey="bookings" fill="#d4af37" />
               </BarChart>
             </ResponsiveContainer>
           </GlassCard>
         </div>
 
-        {/* Management Tabs */}
+        {
+    /* Management Tabs */
+  }
         <Tabs defaultValue="providers" className="space-y-6">
           <TabsList className="bg-[var(--glass-bg)] border border-[var(--glass-border)]">
             <TabsTrigger value="providers">Provider Approvals</TabsTrigger>
@@ -114,8 +112,7 @@ export function AdminDashboard() {
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {pendingProviders.map((provider) => (
-                    <TableRow key={provider.id}>
+                  {pendingProviders.map((provider) => <TableRow key={provider.id}>
                       <TableCell className="font-medium">{provider.name}</TableCell>
                       <TableCell>{provider.location}</TableCell>
                       <TableCell>{provider.services}</TableCell>
@@ -132,8 +129,7 @@ export function AdminDashboard() {
                           </Button>
                         </div>
                       </TableCell>
-                    </TableRow>
-                  ))}
+                    </TableRow>)}
                 </TableBody>
               </Table>
             </GlassCard>
@@ -153,8 +149,7 @@ export function AdminDashboard() {
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {recentUsers.map((user) => (
-                    <TableRow key={user.id}>
+                  {recentUsers.map((user) => <TableRow key={user.id}>
                       <TableCell className="font-medium">{user.name}</TableCell>
                       <TableCell>{user.email}</TableCell>
                       <TableCell>{user.vehicles}</TableCell>
@@ -165,8 +160,7 @@ export function AdminDashboard() {
                           View
                         </Button>
                       </TableCell>
-                    </TableRow>
-                  ))}
+                    </TableRow>)}
                 </TableBody>
               </Table>
             </GlassCard>
@@ -187,6 +181,8 @@ export function AdminDashboard() {
           </TabsContent>
         </Tabs>
       </div>
-    </div>
-  );
+    </div>;
 }
+export {
+  AdminDashboard
+};
