@@ -1,7 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
 
 const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
-const DEFAULT_MODEL = import.meta.env.VITE_GEMINI_MODEL || "gemini-3.5-flash";
+const DEFAULT_MODEL = import.meta.env.VITE_GEMINI_MODEL || "gemini-2.5-flash";
 
 const REQUIRED_ROOT_KEYS = [
   "healthScore",
@@ -128,7 +128,7 @@ export const analyzeVehicleImage = async (imageFile, options = {}) => {
 };
 
 export const GEMINI_MODELS = {
-  flash: "gemini-3.5-flash",
+  flash: "gemini-2.5-flash",
   flash25: "gemini-2.5-flash",
   proVision: "gemini-pro-vision"
 };
