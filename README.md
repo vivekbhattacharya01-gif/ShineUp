@@ -2,7 +2,7 @@
 
 A premium AI-powered marketplace that helps vehicle owners identify paint and condition issues using AI and connect with verified detailing professionals.
 
-🌐 **Live Demo:** [Coming Soon]  
+🌐 **Live Demo:** [https://shine-up.netlify.app/](https://shine-up.netlify.app/)
 🔗 **GitHub:** [github.com/vivekbhattacharya01-gif](https://github.com/vivekbhattacharya01-gif)
 
 ---
